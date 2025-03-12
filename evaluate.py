@@ -17,7 +17,7 @@ num_classes = 1
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Preprocess data
-file_path = "data/text1.txt"
+file_path = "data/New Text Document (2).txt"
 inputs, labels, vocab = preprocess_text(file_path)
 dataset = TextDataset(inputs, labels)
 dataloader = DataLoader(dataset, batch_size=2, shuffle=False)
