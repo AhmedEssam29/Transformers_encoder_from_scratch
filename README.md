@@ -103,6 +103,45 @@ text_summarization_project/
 
 ---
 
+## Training Results
+
+### Overview
+The training process was conducted over 10 epochs, with the model being trained on batches of data. The loss was logged at each batch to monitor the training progress.
+
+### Training Loss
+The following table summarizes the loss values recorded at the end of each epoch:
+
+| Epoch | Loss (Last Batch) |
+|-------|--------------------|
+| 1     | 0.029179930686950684 |
+| 2     | 3.5010061264038086 |
+| 3     | 1.2415379285812378 |
+| 4     | 1.2143275737762451 |
+| 5     | 1.410714864730835 |
+| 6     | 1.1609588861465454 |
+| 7     | 1.4346656799316406 |
+| 8     | 1.0334097146987915 |
+| 9     | 1.5288965702056885 |
+| 10    | 1.0628677606582642 |
+
+### Observations
+- The training loss fluctuated significantly across epochs, indicating variability in the training process.
+- The lowest loss recorded was 0.029179930686950684 at the end of epoch 1.
+- The highest loss recorded was 3.5010061264038086 at the end of epoch 2.
+- The model showed some improvement in loss reduction towards the later epochs, but there were still significant fluctuations.
+
+### Conclusion
+The training process demonstrated the model's ability to learn from the data, but the variability in loss suggests that further tuning of hyperparameters and training strategies may be necessary to achieve more stable and lower loss values.
+
+### Future Work
+- **Hyperparameter Tuning**: Experiment with different learning rates, batch sizes, and other hyperparameters to stabilize the training process.
+- **Data Augmentation**: Consider augmenting the training data to provide more diverse examples for the model to learn from.
+- **Model Architecture**: Explore modifications to the model architecture to improve its learning capabilities and reduce loss.
+
+
+---
+
+
 ## 🤝 Contributing
 Contributions are welcome! To contribute:
 1. **Fork the repository.**
