@@ -16,4 +16,5 @@ class SummarizationModel(nn.Module):
         encoder_output = self.encoder(x, mask)
         pooled_output = encoder_output.mean(dim=1)
         logits = self.fc(pooled_output)
-        return logits.squeeze()
+        return logits  # Remove the squeeze operation
+

@@ -38,8 +38,14 @@ def preprocess_text(file_path):
 
 
 # utils/preprocessing.py
+
+
+# utils/preprocessing.py
+
+import torch
+from torch.utils.data import Dataset
+
 class TextDataset(Dataset):
-    """Custom Dataset for text data - Ahmed Essam"""
     def __init__(self, inputs, labels):
         self.inputs = inputs
         self.labels = labels
@@ -48,4 +54,7 @@ class TextDataset(Dataset):
         return len(self.inputs)
 
     def __getitem__(self, idx):
-        return self.inputs[idx], self.labels[idx]
+        input_tensor = torch.tensor(self.inputs[idx], dtype=torch.long)
+        label_tensor = torch.tensor(self.labels[idx], dtype=torch.float)
+        return input_tensor, label_tensor
+
